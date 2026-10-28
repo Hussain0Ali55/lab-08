@@ -54,8 +54,8 @@ class WizardTest {
         evilWizard.spellPower = 10
         evilWizard.train()
 
-        assertEquals(5, evilWizard.mana)
-        assertEquals(11, evilWizard.spellPower)
+        assertEquals(5, evilWizard.mana) //Mana should decrease by 5
+        assertEquals(11, evilWizard.spellPower) //SpellPower should increase by 1
     }
 
     // test should test if we don't have enough mana
@@ -64,9 +64,10 @@ class WizardTest {
         evilWizard.mana = 3
         evilWizard.spellPower = 10
         evilWizard.train()
-        
-        assertEquals(3, evilWizard.mana)
-        assertEquals(10, evilWizard.spellPower)
+
+        assertEquals(3, evilWizard.mana) // mana shouldn't change
+
+        assertEquals(10, evilWizard.spellPower) //spell power shouldn't change
 
 
     }
